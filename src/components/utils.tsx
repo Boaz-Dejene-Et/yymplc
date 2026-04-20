@@ -27,7 +27,7 @@ export function CountUp({ end, suffix = '', duration = 2000 }: { end: number; su
   return <span ref={ref}>{count}{suffix}</span>
 }
 
-export const fadeUp = {
+export const fadeUp: any = {
   hidden: { opacity: 0, y: 36 },
   visible: (i = 0) => ({
     opacity: 1, y: 0,
@@ -35,7 +35,7 @@ export const fadeUp = {
   }),
 }
 
-export const stagger = {
+export const stagger: any = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }

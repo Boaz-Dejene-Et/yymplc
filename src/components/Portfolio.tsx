@@ -63,7 +63,7 @@ export default function Portfolio() {
                     <Box borderRadius="12px" overflow="hidden" h="380px"
                       _hover={{ transform: 'scale(1.02)', boxShadow: '0 20px 50px rgba(0,0,0,0.12)' }}
                       style={{ transition: 'all 0.4s ease' }}>
-                      <Box as="img" src={p.img} w="full" h="full" style={{ objectFit: 'cover' }} />
+                      <Box as={"img" as any} src={p.img} w="full" h="full" style={{ objectFit: 'cover' }} />
                     </Box>
                   )}
                   <VStack align="start" gap={5}>
@@ -82,7 +82,7 @@ export default function Portfolio() {
                     <Box borderRadius="12px" overflow="hidden" h="380px"
                       _hover={{ transform: 'scale(1.02)', boxShadow: '0 20px 50px rgba(0,0,0,0.12)' }}
                       style={{ transition: 'all 0.4s ease' }}>
-                      <Box as="img" src={p.img} w="full" h="full" style={{ objectFit: 'cover' }} />
+                      <Box as={"img" as any} src={p.img} w="full" h="full" style={{ objectFit: 'cover' }} />
                     </Box>
                   )}
                 </Grid>

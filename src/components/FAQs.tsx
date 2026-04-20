@@ -9,7 +9,7 @@ const faqs = [
   { q: 'What makes YYM PLC different?', a: 'Our strength lies in technical competence, reliability, and commitment to quality. We combine advanced technology, skilled craftsmanship, and efficient project management to deliver outstanding results.' },
   { q: 'Does YYM PLC handle large-scale industrial projects?', a: 'Yes. YYM PLC has successfully executed several large-scale projects across Ethiopia and other African countries — from industrial plants to complex piping and structural steelwork.' },
   { q: 'How does YYM PLC ensure quality and safety?', a: 'We follow strict quality control procedures and adhere to international safety standards throughout every stage of production and installation.' },
-  { q: 'Where is YYM PLC located and how can I contact you?', a: 'Our head office and workshop are located in Addis Ababa, Ethiopia. Address: Woreda 03, Sub City Nifas Silk Lafto. Phone: +251-11-372-7466. Email: yymplc@ethionet.et' },
+  { q: 'Where is YYM PLC located and how can I contact you?', a: 'Our head office and workshop are located in Addis Ababa, Ethiopia. Address: Woreda 05, Sub City Bole. Phone: +251-11-372-7466. Email: visitus@yymplc.org' },
   { q: 'Can YYM PLC provide customized metal fabrication solutions?', a: 'Absolutely. We specialize in custom-built metal structures and fabricated components tailored to each client\'s exact specifications.' },
 ]
 

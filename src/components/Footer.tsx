@@ -34,7 +34,7 @@ export default function Footer() {
           <VStack align="start" gap={4}>
             <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="rgba(255,255,255,0.4)" textTransform="uppercase">Contact</Text>
             {[
-              { label: 'Email', value: 'yymplc@ethionet.et' },
+              { label: 'Email', value: 'visitus@yymplc.org' },
               { label: 'Phone', value: '+251-11-372-7466' },
               { label: 'Location', value: 'Addis Ababa, Ethiopia' },
             ].map((item) => (

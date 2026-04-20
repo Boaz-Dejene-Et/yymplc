@@ -52,7 +52,7 @@ export default function About() {
                   <Box h="220px" borderRadius="10px" overflow="hidden"
                     _hover={{ transform: 'scale(1.04)', boxShadow: '0 16px 40px rgba(0,0,0,0.12)' }}
                     style={{ transition: 'all 0.35s ease' }}>
-                    <Box as="img" src={src} w="full" h="full" style={{ objectFit: 'cover' }} />
+                    <Box as={"img" as any} src={src} w="full" h="full" style={{ objectFit: 'cover' }} />
                   </Box>
                 </motion.div>
               ))}

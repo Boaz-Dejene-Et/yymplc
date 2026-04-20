@@ -30,8 +30,8 @@ export default function Contact() {
 
                 <VStack align="start" gap={6}>
                   {[
-                    { label: 'Office', value: 'Woreda 03, Sub City Nifas Silk Lafto, Addis Ababa, Ethiopia' },
-                    { label: 'Email', value: 'yymplc@ethionet.et' },
+                    { label: 'Office', value: 'Woreda 05, Sub City Bole, Addis Ababa, Ethiopia' },
+                    { label: 'Email', value: 'visitus@yymplc.org' },
                     { label: 'Telephone', value: '+251-11-372-7466 / +251-11-372-2237' },
                   ].map((item) => (
                     <Box key={item.label}>

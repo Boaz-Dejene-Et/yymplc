@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}>
             <VStack gap={4}>
               <Box w="full" h="360px" borderRadius="12px" overflow="hidden">
-                <Box as="img" src={IMG} w="full" h="full" style={{ objectFit: 'cover' }} />
+                <Box as={"img" as any} src={IMG} w="full" h="full" style={{ objectFit: 'cover' }} />
               </Box>
               <HStack gap={4} w="full">
                 <Box flex={1} h="180px" borderRadius="12px" overflow="hidden">
