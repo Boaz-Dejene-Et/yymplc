@@ -82,7 +82,7 @@ const projects = [
     author: 'Project Supervisor, Omo Kuraz Sugar Factory',
   },
   {
-    images: [PI2, PI7, PI8], tag: 'Metal Work', duration: '1 month',
+    images: [PI2, PI13, PI14], tag: 'Metal Work', duration: '1 month',
     title: 'Great Ethiopian Renaissance Dam (GERD)',
     desc: 'Major structural and piping works for the GERD project, focusing on robust metal fabrication and assembly. Our team ensured reliable performance and safety compliance under tight schedules.',
     quote: `"Their reliability and craftsmanship were crucial to our success. YYM PLC consistently met our high engineering standards."`,
