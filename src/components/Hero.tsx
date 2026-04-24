@@ -2,7 +2,10 @@ import { Box, Container, Grid, VStack, HStack, Text, Heading, Button } from '@ch
 import { motion } from 'framer-motion'
 import { fadeLeft, fadeRight, stagger } from './utils'
 
+import companyProfilePdf from '../assets/YYM_PLC_updated.pdf'
+
 const MotionVStack = motion(VStack)
+
 
 import IMG from '../assets/2026-04-20 20.47.05.jpg'
 import IMG2 from '../assets/2026-04-20 20.47.08.jpg'
@@ -45,7 +48,7 @@ export default function Hero() {
 
             <motion.div variants={fadeLeft} custom={3}>
               <HStack gap={4}>
-                <Button as="a" href="#contact" bg="#1a1a1a" color="#fff" fontWeight={600}
+                <Button as="a" href={companyProfilePdf + '#toolbar=0'} target="_blank" rel="noopener noreferrer" bg="#1a1a1a" color="#fff" fontWeight={600}
                   px={7} h="48px" borderRadius="4px" fontSize="sm"
                   _hover={{ bg: '#333', transform: 'translateY(-2px)', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }}
                   transition="all 0.3s">Work with us</Button>
