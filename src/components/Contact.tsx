@@ -1,6 +1,6 @@
 import { Box, Container, Grid, VStack, HStack, Text, Heading, Input, Textarea, Button } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { fadeUp, stagger } from './utils'
+import { fadeLeft, fadeRight, stagger } from './utils'
 
 const inputStyle = {
   bg: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '6px',
@@ -16,7 +16,7 @@ export default function Contact() {
       <Container maxW="1200px" px={6}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger}>
           <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={16}>
-            <motion.div variants={fadeUp} custom={0}>
+            <motion.div variants={fadeLeft} custom={0}>
               <VStack align="start" gap={10}>
                 <VStack align="start" gap={4}>
                   <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="#888" textTransform="uppercase">Contact</Text>
@@ -32,7 +32,8 @@ export default function Contact() {
                   {[
                     { label: 'Office', value: 'Woreda 05, Sub City Bole, Addis Ababa, Ethiopia' },
                     { label: 'Email', value: 'visitus@yymplc.org' },
-                    { label: 'Telephone', value: '+251-11-372-7466 / +251-11-372-2237' },
+                    { label: 'OfficeTel', value: '+251 11 662 2466' },
+                    { label: 'Cellphone', value: '+251 987 131 313, +251 929 112 634' },
                   ].map((item) => (
                     <Box key={item.label}>
                       <Text fontSize="xs" fontWeight={700} letterSpacing="1.5px" color="#888" textTransform="uppercase" mb={1}>{item.label}</Text>
@@ -43,7 +44,7 @@ export default function Contact() {
               </VStack>
             </motion.div>
 
-            <motion.div variants={fadeUp} custom={1}>
+            <motion.div variants={fadeRight} custom={1}>
               <VStack gap={4} align="stretch">
                 <Input placeholder="Name *" {...inputStyle} />
                 <Input placeholder="Email *" type="email" {...inputStyle} />
@@ -51,7 +52,8 @@ export default function Contact() {
                 <Textarea placeholder="Message *" {...inputStyle} h="auto" minH="140px" resize="none" />
                 <Button
                   bg="#1a1a1a" color="#fff" fontWeight={700} letterSpacing="0.5px"
-                  fontSize="sm" h="50px" borderRadius="6px" w="full"
+                  fontSize="sm" h="50px" borderRadius="6px" w={{ base: 'full', md: 'auto' }} px={10}
+                  alignSelf={{ base: 'stretch', md: 'center' }}
                   _hover={{ bg: '#333', transform: 'translateY(-2px)', boxShadow: '0 10px 28px rgba(0,0,0,0.15)' }}
                   transition="all 0.3s"
                 >Send message</Button>

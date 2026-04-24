@@ -1,6 +1,6 @@
 import { Box, Container, Text, VStack } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { fadeUp } from './utils'
+import { fadeUp, scaleUp } from './utils'
 
 const reviews = [
   { text: 'YYM PLC displayed excellent technical capability and professionalism.', name: 'Omo Kuraz Sugar Factory' },
@@ -15,7 +15,7 @@ const doubled = [...reviews, ...reviews]
 
 export default function Testimonials() {
   return (
-    <Box bg="#fff" py={20} overflow="hidden">
+    <Box id="testimonials" bg="#fff" py={20} overflow="hidden">
       <Container maxW="1200px" px={6} mb={12}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
           <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="#888" textTransform="uppercase" mb={3}>
@@ -34,15 +34,17 @@ export default function Testimonials() {
           transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
         >
           {doubled.map((r, i) => (
-            <Box key={i} minW="320px" maxW="320px" bg="#f8f8f8" borderRadius="12px" p={6}
-              border="1px solid #eee">
-              <VStack align="start" gap={3}>
-                <Text fontSize="sm" color="#555" lineHeight={1.75} fontStyle="italic">
+            <motion.div key={i} whileHover={{ y: -8, scale: 1.02 }} transition={{ duration: 0.3 }}>
+              <Box minW="320px" maxW="320px" bg="#f8f8f8" borderRadius="12px" p={8}
+                border="1px solid #eee" h="100%" display="flex" flexDirection="column" justifyContent="space-between"
+                boxShadow="0 4px 12px rgba(0,0,0,0.03)"
+                _hover={{ boxShadow: '0 12px 24px rgba(0,0,0,0.08)', borderColor: '#e0e0e0' }}>
+                <Text fontSize="sm" color="#555" lineHeight={1.8} fontStyle="italic" mb={6}>
                   "{r.text}"
                 </Text>
-                <Text fontSize="xs" fontWeight={700} color="#1a1a1a">— {r.name}</Text>
-              </VStack>
-            </Box>
+                <Text fontSize="xs" fontWeight={800} letterSpacing="0.5px" color="#1a1a1a" textTransform="uppercase">— {r.name}</Text>
+              </Box>
+            </motion.div>
           ))}
         </motion.div>
         <Box position="absolute" left={0} top={0} bottom={0} w="80px"

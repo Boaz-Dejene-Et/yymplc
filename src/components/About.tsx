@@ -1,11 +1,11 @@
 import { Box, Container, Grid, VStack, Text, Heading } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { CountUp, fadeUp, stagger } from './utils'
+import { CountUp, fadeLeft, fadeRight, scaleUp, stagger } from './utils'
 
-const IMG_A = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80'
-const IMG_B = 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80'
-const IMG_C = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&q=80'
-const IMG_D = 'https://images.unsplash.com/photo-1565462905408-4c75a8e4c9e5?w=400&q=80'
+import IMG_A from '../assets/2026-04-20 20.46.47.jpg'
+import IMG_B from '../assets/2026-04-20 20.46.52.jpg'
+import IMG_C from '../assets/2026-04-20 20.46.56.jpg'
+import IMG_D from '../assets/2026-04-20 20.47.01.jpg'
 
 const stats = [
   { value: 8, suffix: '+', label: 'Years experience', sub: 'Delivering industrial excellence' },
@@ -20,7 +20,7 @@ export default function About() {
       <Container maxW="1200px" px={6}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger}>
           <Grid templateColumns={{ base: '1fr', lg: '5fr 7fr' }} gap={16} alignItems="start" mb={20}>
-            <motion.div variants={fadeUp} custom={0}>
+            <motion.div variants={fadeLeft} custom={0}>
               <VStack align="start" gap={6}>
                 <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="#888" textTransform="uppercase">About YYM</Text>
                 <Heading fontSize={{ base: '2rem', lg: '2.6rem' }} fontWeight={900} lineHeight={1.15} color="#1a1a1a">
@@ -28,13 +28,13 @@ export default function About() {
                 </Heading>
               </VStack>
             </motion.div>
-            <motion.div variants={fadeUp} custom={1}>
+            <motion.div variants={fadeRight} custom={1}>
               <VStack align="start" gap={4}>
                 <Text fontSize="md" color="#555" lineHeight={1.85}>
                   At YYM PLC, we specialize in providing complete metal fabrication and industrial engineering services — from design and manufacturing to installation and maintenance. Our team delivers technically competent, high-quality products and services that meet international standards.
                 </Text>
                 <Text fontSize="md" color="#555" lineHeight={1.85}>
-                  We support clients across diverse industries including construction, manufacturing, oil and gas, energy, and infrastructure development. With extensive experience in both local and international projects, YYM PLC ensures precision, durability, and operational efficiency in every task.
+                  We support clients across diverse industries including construction, manufacturing, energy, and infrastructure development. With extensive experience in both local and international projects, YYM PLC ensures precision, durability, and operational efficiency in every task.
                 </Text>
                 <Box mt={2} p={5} bg="#1a1a1a" borderRadius="8px">
                   <Text fontSize="sm" color="rgba(255,255,255,0.85)" fontStyle="italic" lineHeight={1.8}>
@@ -48,7 +48,7 @@ export default function About() {
           <motion.div variants={stagger}>
             <Grid templateColumns={{ base: '1fr 1fr', lg: 'repeat(4,1fr)' }} gap={4} mb={16}>
               {[IMG_A, IMG_B, IMG_C, IMG_D].map((src, i) => (
-                <motion.div key={i} variants={fadeUp} custom={i}>
+                <motion.div key={i} variants={scaleUp} custom={i}>
                   <Box h="220px" borderRadius="10px" overflow="hidden"
                     _hover={{ transform: 'scale(1.04)', boxShadow: '0 16px 40px rgba(0,0,0,0.12)' }}
                     style={{ transition: 'all 0.35s ease' }}>
@@ -61,7 +61,7 @@ export default function About() {
 
           <Grid templateColumns={{ base: '1fr 1fr', lg: 'repeat(4,1fr)' }} gap={8}>
             {stats.map((s, i) => (
-              <motion.div key={i} variants={fadeUp} custom={i}>
+              <motion.div key={i} variants={scaleUp} custom={i}>
                 <VStack align="start" gap={1}>
                   <Heading fontSize="2.8rem" fontWeight={900} color="#1a1a1a" lineHeight={1}>
                     <CountUp end={s.value} suffix={s.suffix} />

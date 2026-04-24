@@ -54,8 +54,8 @@ export default function Navbar() {
             as="a" href="#contact"
             bg="#1a1a1a" color="#fff" size="sm" fontWeight={600}
             fontSize="xs" px={6} h="38px" borderRadius="2px"
-            _hover={{ bg: '#333', transform: 'translateY(-1px)' }}
-            display={{ base: 'none', md: 'block' }} transition="all 0.2s"
+            _hover={{ bg: '#333', transform: 'translateY(-1px)', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+            display={{ base: 'none', md: 'flex' }} alignItems="center" transition="all 0.2s"
           >Get in touch</Button>
 
           <Box display={{ base: 'flex', md: 'none' }} flexDir="column" gap="5px"

@@ -1,15 +1,15 @@
 import { Box, Container, Grid, VStack, HStack, Text, Heading, Badge } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { fadeUp, stagger } from './utils'
+import { fadeLeft, fadeRight, stagger } from './utils'
 
-const PI = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'
-const PI2 = 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=700&q=80'
-const PI3 = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80'
-const PI4 = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'
+import PI from '../assets/2026-04-20 20.47.40.jpg'
+import PI2 from '../assets/2026-04-20 20.47.36.jpg'
+import PI3 from '../assets/2026-04-20 20.47.48.jpg'
+import PI4 from '../assets/2026-04-20 20.47.29.jpg'
 
 const projects = [
   {
-    img: PI, tag: 'Metal Work', duration: '4 weeks',
+    img: PI4, tag: 'Metal Work', duration: '4 weeks',
     title: 'Diffuser Piping at Omo Kuraz Sugar Factory',
     desc: 'YYM PLC designed, fabricated, and installed large-scale diffuser piping systems for the Omo Kuraz Sugar Project. Precision welding, assembly, and on-site installation under challenging industrial conditions.',
     quote: `"YYM PLC displayed excellent technical capability and completed our piping installation with high quality and professionalism."`,
@@ -31,7 +31,7 @@ const projects = [
     author: 'Maintenance Head, Ethio Plywood and Furniture Factory',
   },
   {
-    img: PI4, tag: 'Metal Work', duration: '6 weeks',
+    img: PI, tag: 'Metal Work', duration: '6 weeks',
     title: 'Water Tank and Trailer Fabrication',
     desc: 'Fabricated and supplied customized steel water tanks, trailers, and industrial containers for clients across Ethiopia and neighboring regions, engineered for durability and field performance.',
     quote: `"YYM PLC delivered high-quality tanks and trailers that perform exceptionally well in our operations."`,
@@ -45,7 +45,7 @@ export default function Portfolio() {
     <Box id="our-work" bg="#f8f8f8" py={24}>
       <Container maxW="1200px" px={6}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger}>
-          <motion.div variants={fadeUp} custom={0}>
+          <motion.div variants={fadeLeft} custom={0}>
             <VStack align="start" gap={3} mb={16}>
               <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="#888" textTransform="uppercase">Portfolio</Text>
               <Heading fontSize={{ base: '2rem', lg: '2.6rem' }} fontWeight={900} color="#1a1a1a">
@@ -56,7 +56,7 @@ export default function Portfolio() {
 
           <VStack gap={20} align="stretch">
             {projects.map((p, i) => (
-              <motion.div key={i} variants={fadeUp} custom={i}>
+              <motion.div key={i} variants={i % 2 === 0 ? fadeLeft : fadeRight} custom={i}>
                 <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap={12} alignItems="center"
                   direction={p.flip ? 'row-reverse' : 'row'}>
                   {!p.flip && (

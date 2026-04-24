@@ -28,14 +28,38 @@ export function CountUp({ end, suffix = '', duration = 2000 }: { end: number; su
 }
 
 export const fadeUp: any = {
-  hidden: { opacity: 0, y: 36 },
+  hidden: { opacity: 0, y: 80 },
   visible: (i = 0) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: 'easeOut' },
+    transition: { duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
+  }),
+}
+
+export const fadeLeft: any = {
+  hidden: { opacity: 0, x: -80 },
+  visible: (i = 0) => ({
+    opacity: 1, x: 0,
+    transition: { duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
+  }),
+}
+
+export const fadeRight: any = {
+  hidden: { opacity: 0, x: 80 },
+  visible: (i = 0) => ({
+    opacity: 1, x: 0,
+    transition: { duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
+  }),
+}
+
+export const scaleUp: any = {
+  hidden: { opacity: 0, scale: 0.85, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1, scale: 1, y: 0,
+    transition: { duration: 0.9, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
   }),
 }
 
 export const stagger: any = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }

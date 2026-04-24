@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, Container, Grid, VStack, Text, Heading } from '@chakra-ui/react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { fadeUp, stagger } from './utils'
+import { fadeLeft, scaleUp, stagger } from './utils'
 
 const services = [
   {
@@ -29,6 +29,14 @@ const services = [
     title: 'Material Supply',
     desc: 'High-quality metal and mechanical materials including structural steel, pipes, fittings, and fabrication components.',
   },
+  {
+    title: 'Wood Work',
+    desc: 'High-quality custom woodwork and furniture manufacturing tailored to your specific project needs.',
+  },
+  {
+    title: 'Electro-Mechanical Engineering',
+    desc: 'Advanced electro-mechanical engineering services, delivering reliable integration and installation.',
+  },
 ]
 
 export default function Services() {
@@ -38,7 +46,7 @@ export default function Services() {
     <Box id="services" bg="#fff" py={24}>
       <Container maxW="1200px" px={6}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} variants={stagger}>
-          <motion.div variants={fadeUp} custom={0}>
+          <motion.div variants={fadeLeft} custom={0}>
             <VStack align="start" gap={3} mb={14}>
               <Text fontSize="xs" fontWeight={700} letterSpacing="2px" color="#888" textTransform="uppercase">What we do</Text>
               <Heading fontSize={{ base: '2rem', lg: '2.6rem' }} fontWeight={900} color="#1a1a1a">
@@ -49,7 +57,7 @@ export default function Services() {
 
           <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={0}>
             {services.map((s, i) => (
-              <motion.div key={i} variants={fadeUp} custom={i}
+              <motion.div key={i} variants={scaleUp} custom={i}
                 style={{ gridColumn: s.full ? '1 / -1' : 'auto' }}>
                 <Box
                   p={8} borderBottom="1px solid #e8e8e8"
