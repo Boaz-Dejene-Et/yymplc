@@ -5,7 +5,7 @@ import { CountUp, fadeLeft, fadeRight, scaleUp, stagger } from './utils'
 import IMG_A from '../assets/IMG_20220223_171200.jpg'
 import IMG_B from '../assets/2026-04-20 20.47.21.jpg'
 import IMG_C from '../assets/2026-04-20 20.46.56.jpg'
-import IMG_D from '../assets/2026-04-24 19.28.30.jpg'
+import IMG_D from '../assets/2026-04-24 19.33.30.jpg'
 
 const stats = [
   { value: 8, suffix: '+', label: 'Years experience', sub: 'Delivering industrial excellence' },
