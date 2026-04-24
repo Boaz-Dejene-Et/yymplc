@@ -2,7 +2,7 @@ import { Box, Container, Grid, VStack, Text, Heading } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { CountUp, fadeLeft, fadeRight, scaleUp, stagger } from './utils'
 
-import IMG_A from '../assets/2026-04-20 20.46.47.jpg'
+import IMG_A from '../assets/IMG_20220223_171200.jpg'
 import IMG_B from '../assets/2026-04-20 20.46.52.jpg'
 import IMG_C from '../assets/2026-04-20 20.46.56.jpg'
 import IMG_D from '../assets/2026-04-20 20.47.01.jpg'

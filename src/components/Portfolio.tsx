@@ -2,9 +2,9 @@ import { Box, Container, Grid, VStack, HStack, Text, Heading, Badge } from '@cha
 import { motion } from 'framer-motion'
 import { fadeLeft, fadeRight, stagger } from './utils'
 
-import PI from '../assets/2026-04-20 20.47.40.jpg'
-import PI2 from '../assets/2026-04-20 20.47.36.jpg'
-import PI3 from '../assets/2026-04-20 20.47.48.jpg'
+import PI from '../assets/_DSC0427.JPG'
+import PI2 from '../assets/2026-04-24 09.31.48.jpg'
+import PI3 from '../assets/2026-04-24 09.29.15.jpg'
 import PI4 from '../assets/2026-04-20 20.47.29.jpg'
 
 const projects = [
