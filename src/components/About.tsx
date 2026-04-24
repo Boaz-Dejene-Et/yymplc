@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import { CountUp, fadeLeft, fadeRight, scaleUp, stagger } from './utils'
 
 import IMG_A from '../assets/IMG_20220223_171200.jpg'
-import IMG_B from '../assets/2026-04-20 20.46.52.jpg'
+import IMG_B from '../assets/2026-04-20 20.47.21.jpg'
 import IMG_C from '../assets/2026-04-20 20.46.56.jpg'
-import IMG_D from '../assets/2026-04-20 20.47.01.jpg'
+import IMG_D from '../assets/2026-04-20 20.47.32.jpg'
 
 const stats = [
   { value: 8, suffix: '+', label: 'Years experience', sub: 'Delivering industrial excellence' },
@@ -47,12 +47,22 @@ export default function About() {
 
           <motion.div variants={stagger}>
             <Grid templateColumns={{ base: '1fr 1fr', lg: 'repeat(4,1fr)' }} gap={4} mb={16}>
-              {[IMG_A, IMG_B, IMG_C, IMG_D].map((src, i) => (
+              {[
+                { src: IMG_A, title: 'Gold washing machine' },
+                { src: IMG_B, title: 'Track mounted concrete pump' },
+                { src: IMG_C, title: 'Smart pole street light' },
+                { src: IMG_D, title: 'Staffs on duty' }
+              ].map((item, i) => (
                 <motion.div key={i} variants={scaleUp} custom={i}>
-                  <Box h="220px" borderRadius="10px" overflow="hidden"
+                  <Box position="relative" h="220px" borderRadius="10px" overflow="hidden"
                     _hover={{ transform: 'scale(1.04)', boxShadow: '0 16px 40px rgba(0,0,0,0.12)' }}
                     style={{ transition: 'all 0.35s ease' }}>
-                    <Box as={"img" as any} src={src} w="full" h="full" style={{ objectFit: 'cover' }} />
+                    <Box position="absolute" top={0} left={0} right={0} bg="rgba(0,0,0,0.5)" p={3} zIndex={1}>
+                      <Text color="white" fontSize="sm" fontWeight={600} textAlign="center" textTransform="capitalize">
+                        {item.title}
+                      </Text>
+                    </Box>
+                    <Box as={"img" as any} src={item.src} w="full" h="full" style={{ objectFit: 'cover' }} />
                   </Box>
                 </motion.div>
               ))}

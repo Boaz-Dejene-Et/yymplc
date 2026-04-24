@@ -15,6 +15,8 @@ import PI9 from '../assets/2026-04-20 20.47.44.jpg'
 import PI10 from '../assets/2026-04-20 20.47.48.jpg'
 import PI11 from '../assets/2026-04-24 17.21.38.jpg'
 import PI12 from '../assets/2026-04-24 17.21.28.jpg'
+import PI13 from '../assets/2026-04-20 20.47.36.jpg'
+import PI14 from '../assets/2026-04-24 17.49.35.jpg'
 
 const LeftArrow = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
