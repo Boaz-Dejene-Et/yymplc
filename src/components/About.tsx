@@ -51,7 +51,7 @@ export default function About() {
                 { src: IMG_A, title: 'Gold washing machine' },
                 { src: IMG_B, title: 'Track mounted concrete pump' },
                 { src: IMG_C, title: 'Smart pole street light Production' },
-                { src: IMG_D, title: 'Smart pole Street light during night time' }
+                { src: IMG_D, title: 'Fixing smart pole street light' }
               ].map((item, i) => (
                 <motion.div key={i} variants={scaleUp} custom={i}>
                   <Box position="relative" h="220px" borderRadius="10px" overflow="hidden"
