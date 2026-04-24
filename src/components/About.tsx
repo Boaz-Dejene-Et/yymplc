@@ -50,7 +50,7 @@ export default function About() {
               {[
                 { src: IMG_A, title: 'Gold washing machine' },
                 { src: IMG_B, title: 'Track mounted concrete pump' },
-                { src: IMG_C, title: 'Smart pole street light' },
+                { src: IMG_C, title: 'Smart pole street light Production' },
                 { src: IMG_D, title: 'Staffs on duty' }
               ].map((item, i) => (
                 <motion.div key={i} variants={scaleUp} custom={i}>
