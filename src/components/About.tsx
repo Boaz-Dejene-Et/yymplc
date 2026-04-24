@@ -5,7 +5,7 @@ import { CountUp, fadeLeft, fadeRight, scaleUp, stagger } from './utils'
 import IMG_A from '../assets/IMG_20220223_171200.jpg'
 import IMG_B from '../assets/2026-04-20 20.47.21.jpg'
 import IMG_C from '../assets/2026-04-20 20.46.56.jpg'
-import IMG_D from '../assets/2026-04-20 20.47.32.jpg'
+import IMG_D from '../assets/2026-04-24 19.28.30.jpg'
 
 const stats = [
   { value: 8, suffix: '+', label: 'Years experience', sub: 'Delivering industrial excellence' },
@@ -51,7 +51,7 @@ export default function About() {
                 { src: IMG_A, title: 'Gold washing machine' },
                 { src: IMG_B, title: 'Track mounted concrete pump' },
                 { src: IMG_C, title: 'Smart pole street light Production' },
-                { src: IMG_D, title: 'Staffs on duty' }
+                { src: IMG_D, title: 'Smart pole Street light during night time' }
               ].map((item, i) => (
                 <motion.div key={i} variants={scaleUp} custom={i}>
                   <Box position="relative" h="220px" borderRadius="10px" overflow="hidden"
